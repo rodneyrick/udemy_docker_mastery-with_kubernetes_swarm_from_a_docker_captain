@@ -3,80 +3,58 @@
 ## The Mighty Hub: Using Docker Hub Registry Images
 
 http://hub.docker.com
-
+```
 docker image ls
-
 docker pull nginx
-
 docker pull nginx:1.11.9
-
 docker pull nginx:1.11
-
 docker pull nginx:1.11.9-alpine
-
 docker image ls
+```
+
 
 ## Images and Their Layers: Discover the Image Cache
-
+```
 docker image ls
-
 docker history nginx:latest
-
 docker history mysql
-
 docker image inspect nginx
+```
 
 ## Image Tagging and Pushing to Docker Hub
-
+```
 docker image tag -- help
-
 docker image ls
-
 docker pull mysql/mysql-server
-
 docker image ls
-
 docker pull nginx:mainline
-
 docker image ls
-
 docker image tag nginx bretfisher/nginx
-
 docker image tag --help
-
 docker image ls
-
 docker image push bretfisher/nginx
-
 docker --help
-
 docker login
-
 cat .docker/config.json
-
 docker image push bretfisher/nginx
-
 docker image push bretfisher/nginx bretfisher/nginx:testing
-
 docker image ls
-
 docker image push bretfisher/nginx:testing
-
 docker image ls
+```
 
 ## Building Images: The Dockerfile Basics
-
+```
 cd dockerfile-sample-1
-
 vim Dockerfile
+```
 
 ## Building Images: Running Docker Builds
-
+```
 docker image build -t customnginx .
-
 docker image ls
-
 docker image build -t customnginx .
+```
 
 ## Building Images: Extending Official Images
 
